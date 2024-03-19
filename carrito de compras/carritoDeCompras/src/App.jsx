@@ -1,32 +1,33 @@
 /* eslint-disable react/jsx-key */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unknown-property */
-import { useState } from "react";
 import { Header } from "./components/Header";
 import { Guitarra } from "./components/guitarra";
-import { db } from "./data/db";
+import { useCart } from "./hooks/useCart";
 
 function App() {
-  const [data, setData] = useState(db);
-  const [cart, setCart] = useState([]);
-
-  function addToCart(item) {
-    const itemExist = cart.findIndex((guitar) => guitar.id === item.id);
-    if (itemExist >= 0) {
-      console.log("existe");
-      const copiaCart = [...cart];
-      copiaCart[itemExist].quantity++;
-      setCart(copiaCart);
-    } else {
-      item.quantity = 1;
-      setCart([...cart, item]);
-    }
-  }
+  const {
+    data,
+    cart,
+    addToCart,
+    removeFromCart,
+    incrementarCantidad,
+    decrementarCantidad,
+    vaciarCarrito,
+    isEmpty,
+    cartTotal
+  } = useCart();
 
   return (
     <>
-      <Header 
+      <Header
         cart={cart}
+        removeFromCart={removeFromCart}
+        decrementarCantidad={decrementarCantidad}
+        incrementarCantidad={incrementarCantidad}
+        vaciarCarrito={vaciarCarrito}
+        isEmpty={isEmpty}
+        cartTotal={cartTotal}
       />
 
       <main className="container-xl mt-5">
@@ -35,12 +36,7 @@ function App() {
         <div className="row mt-5">
           {data.map((guitar) => {
             return (
-              <Guitarra
-                key={guitar.id}
-                guitar={guitar}
-                setCart={setCart}
-                addToCart={addToCart}
-              />
+              <Guitarra key={guitar.id} guitar={guitar} addToCart={addToCart} />
             );
           })}
         </div>
