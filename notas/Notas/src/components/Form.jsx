@@ -39,14 +39,14 @@ export const Form = () => {
 
   return (
     <>
-      <section>
-        <form onSubmit={enviar}>
-          <input placeholder="Escribir nota" onChange={change} value={input} />
-          <input type="submit" />
+      <section className="formulario">
+        <form onSubmit={enviar} className="form">
+          <input placeholder="Escribir nota" onChange={change} value={input} className="inputForm"/>
+          <input type="submit"  className="submit"/>
         </form>
       </section>
 
-      <section className="hola">
+      <section className="container-tareas">
         {nota.map((item) => (
           <InvidualForm
             key={item.id}

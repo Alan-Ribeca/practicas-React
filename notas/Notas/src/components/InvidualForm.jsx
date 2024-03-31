@@ -19,19 +19,19 @@ export const InvidualForm = ({ item, inputActualizado, onDelete }) => {
     }
 
     return (
-      <form>
-        <input type="text" onChange={change} value={nuevoValor} />
-        <button onClick={handleNewValue}>Update</button>
+      <form className="container">
+        <textarea type="text" onChange={change} value={nuevoValor} className="textarea"/>
+        <button onClick={handleNewValue} className="button">Update</button>
       </form>
     );
   }
 
   function FormNormal() {
     return (
-      <div>
-        {item.title}
-        <button onClick={() => setEdit(true)}>Edit</button>
-        <button onClick={() => onDelete(item.id)}>Delete</button>
+      <div className="container">
+        <textarea className="textarea">{item.title}</textarea>
+        <button className="button" onClick={() => setEdit(true)}>Edit</button>
+        <button className="button" onClick={() => onDelete(item.id)}>Delete</button>
       </div>
     );
   }
