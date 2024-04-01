@@ -1,7 +1,7 @@
 import { Container } from "./components/grid/Container";
 import { Header } from "./components/navbar/Header";
-import "./styles/App.scss";
 import { StateCompo } from "./context/StateCompo";
+import "./styles/App.scss";
 
 function App() {
   return (
