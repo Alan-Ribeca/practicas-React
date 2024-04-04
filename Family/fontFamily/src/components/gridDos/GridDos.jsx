@@ -4,7 +4,7 @@ export const GridDos = () => {
   return (
     <>
       <table className="gridDos">
-        <caption className="calendario">Calendario</caption>
+        <p className="calendario">Calendario</p>
         <thead className="thead">
           <tr className="tr">
             <th className="th">Lu</th>
@@ -27,7 +27,7 @@ export const GridDos = () => {
             <td className="th">7</td>
           </tr>
           <tr className="tr">
-            <tb className="th">8</tb>
+            <td className="th">8</td>
             <td className="th">9</td>
             <td className="th">10</td>
             <td className="th">11</td>

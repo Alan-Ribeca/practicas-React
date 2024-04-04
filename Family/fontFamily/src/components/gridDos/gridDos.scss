@@ -1,0 +1,20 @@
+.gridDos {
+  padding: 4.5rem 1rem 2rem 1rem;
+  border-radius: 10px;
+  box-shadow: -5px -5px 25px -6px rgba(208, 208, 216, 0.808);
+  position: relative;
+
+  .calendario {
+    font-size: 2rem;
+    position: absolute;
+    margin: 0;
+    top: 5%;
+    left: 35%;
+  }
+
+  .th {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+
+}
