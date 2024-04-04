@@ -2,6 +2,7 @@ import { GridUno } from "../gridUno/GridUno";
 import { useContext } from "react";
 import { counterContext } from "../../context/counterContext";
 import "./contenedor.scss";
+import { GridDos } from "../gridDos/GridDos";
 
 export const Container = () => {
   const { selectedFont, fontsData, randomIndex, handleClick } =
@@ -24,9 +25,13 @@ export const Container = () => {
             className="inputBuscador"
           />
         </div>
+        <section className="container">
+
         <article className="grid">
           <GridUno />
+          <GridDos />
         </article>
+        </section>
       </section>
 
       {selectedFont && (
