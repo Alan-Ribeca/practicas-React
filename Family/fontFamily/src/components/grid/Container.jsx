@@ -1,8 +1,9 @@
-import { GridUno } from "../gridUno/GridUno";
+import "./contenedor.scss";
 import { useContext } from "react";
 import { counterContext } from "../../context/counterContext";
-import "./contenedor.scss";
+import { GridUno } from "../gridUno/GridUno";
 import { GridDos } from "../gridDos/GridDos";
+import { GridTres } from "../gridTres/GridTres";
 
 export const Container = () => {
   const { selectedFont, fontsData, randomIndex, handleClick } =
@@ -30,6 +31,7 @@ export const Container = () => {
         <article className="grid">
           <GridUno />
           <GridDos />
+          <GridTres />
         </article>
         </section>
       </section>
