@@ -2,6 +2,10 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  @media screen and (min-width: 1000px) {
+    justify-content: space-between;
+  }
 }
 
 .ulNav {
