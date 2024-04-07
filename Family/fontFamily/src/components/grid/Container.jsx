@@ -1,16 +1,36 @@
 import "./contenedor.scss";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { counterContext } from "../../context/counterContext";
 import { GridUno } from "../gridUno/GridUno";
 import { GridDos } from "../gridDos/GridDos";
 import { GridTres } from "../gridTres/GridTres";
+import { GridCuatro } from "../gridCuatro/GridCuatro";
 
 export const Container = () => {
-  const { selectedFont, fontsData, randomIndex, handleClick } =
-    useContext(counterContext);
+  const { selectedFont, handleClick } = useContext(counterContext);
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.keyCode === 32) {
+        handleClick();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [handleClick]);
 
   return (
     <>
+      {selectedFont && (
+        <link
+          rel="stylesheet"
+          href={`https://fonts.googleapis.com/css2?family=${selectedFont}&display=swap`}
+        />
+      )}
       <section className="containerGeneral">
         <div className="titulo">
           <h1 className="h1Principal">Font-Family: Generator</h1>
@@ -18,7 +38,7 @@ export const Container = () => {
 
         <div className="input">
           <p className="instrucciones">
-            Precione la barra espaciadora o ingrese el nombre de una propiedad
+            Presione la barra espaciadora o ingrese el nombre de una propiedad
           </p>
           <input
             type="text"
@@ -26,34 +46,15 @@ export const Container = () => {
             className="inputBuscador"
           />
         </div>
-        <section className="container">
-
-        <article className="grid">
-          <GridUno />
-          <GridDos />
-          <GridTres />
-        </article>
+        <section className="container" style={{ fontFamily: selectedFont }}>
+          <article className="grid" style={{ fontFamily: selectedFont }}>
+            <GridUno style={{ fontFamily: selectedFont }} />
+            <GridDos style={{ fontFamily: selectedFont }} />
+            <GridTres style={{ fontFamily: selectedFont }} />
+            <GridCuatro style={{ fontFamily: selectedFont }} />
+          </article>
         </section>
       </section>
-
-      {selectedFont && (
-        <link
-          rel="stylesheet"
-          href={`https://fonts.googleapis.com/css2?family=${selectedFont}&display=swap`}
-        />
-      )}
-      <div className="cambiando" style={{ fontFamily: selectedFont }}>
-        <h1>Prueba</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam error
-          rerum odit ab voluptatum, vitae ea provident aliquid aperiam ut
-          similique omnis culpa quod, quae esse in aspernatur? Eaque, voluptas
-        </p>
-        <button onClick={handleClick}>Cambiar</button>
-        {randomIndex !== null && (
-          <p>Fuente cambiada a: {fontsData.items[randomIndex].family}</p>
-        )}
-      </div>
     </>
   );
 };

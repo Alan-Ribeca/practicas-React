@@ -7,7 +7,7 @@
     box-shadow: -1px -1px 9px -3px rgba(208, 208, 216, 0.808);
     width: 100%;
     height: 100%;
-    
+
     .calendario {
       position: absolute;
       font-size: 1.6rem;
@@ -47,21 +47,21 @@
       height: 30px;
       padding: 0;
     }
+  }
+  .btnCalendario {
+    background-color: rgb(88, 5, 64);
+    border: none;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 5%;
+    right: 4%;
+    height: 2rem;
+    width: 7.5rem;
+    color: white;
 
-    .btnCalendario {
-      background-color: rgb(88, 5, 64);
-      border: none;
-      border-radius: 10px;
-      position: absolute;
-      bottom: 5%;
-      right: 4%;
-      height: 2rem;
-      width: 7.5rem;
-      color: white;
-
-      &:hover {
-        cursor: pointer;
-      }
+    &:hover {
+      cursor: pointer;
+      background-color: rgb(151, 23, 115);
     }
   }
 }

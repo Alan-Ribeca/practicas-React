@@ -64,8 +64,8 @@ export const GridDos = () => {
             </tr>
             <hr className="brCalendarioButtom" />
           </tbody>
-          <button className="btnCalendario">Ver mas</button>
         </table>
+        <button className="btnCalendario">Ver mas</button>
       </div>
     </>
   );
