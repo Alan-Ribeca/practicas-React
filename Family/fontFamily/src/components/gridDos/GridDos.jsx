@@ -4,10 +4,10 @@ export const GridDos = () => {
   return (
     <>
       <div className="containerGridTable">
+        <hr className="brCalendarioTop" />
+        <p className="calendario">Calendario</p>
+        <p className="mes">Abril</p>
         <table className="gridDos">
-          <p className="calendario">Calendario</p>
-          <p className="mes">Abril</p>
-          <hr className="brCalendarioTop" />
           <thead className="thead">
             <tr className="tr">
               <th className="th">Lu</th>
@@ -62,9 +62,9 @@ export const GridDos = () => {
               <td className="th"></td>
               <td className="th"></td>
             </tr>
-            <hr className="brCalendarioButtom" />
           </tbody>
         </table>
+        <hr className="brCalendarioButtom" />
         <button className="btnCalendario">Ver mas</button>
       </div>
     </>

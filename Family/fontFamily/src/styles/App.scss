@@ -3,11 +3,11 @@
 }
 
 .body {
-    width: 85%;
+    width: 80%;
     margin: 0 auto;
     color: white;
 
-    @media screen and (min-width: 1000px) {
+    @media screen and (max-width: 1000px) {
         width: 98%;
     }
 }
