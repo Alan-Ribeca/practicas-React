@@ -1,3 +1,4 @@
+import { Footer } from "./components/footer/Footer";
 import { Container } from "./components/grid/Container";
 import { Header } from "./components/navbar/Header";
 import { StateCompo } from "./context/StateCompo";
@@ -10,6 +11,7 @@ function App() {
         <Header />
         <Container />
       </div>
+      <Footer />
     </StateCompo>
   );
 }

@@ -1,14 +1,14 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-undef */
 import { useState, useEffect } from "react";
-
 import { counterContext } from "./counterContext";
 
 // eslint-disable-next-line no-unused-vars
 export const StateCompo = ({ children }) => {
-  const [selectedFont, setSelectedFont] = useState("");
-  const [fontsData, setFontsData] = useState(null);
-  const [randomIndex, setRandomIndex] = useState(null);
+  const [selectedFont, setSelectedFont] = useState(""); // nombre de la fuente
+  const [fontsData, setFontsData] = useState(null); // almacena los datos de las fuentes obtenidas de la API
+  const [randomIndex, setRandomIndex] = useState(null); // almacena el índice aleatorio
+  const [indexActual, setIndecActual] = useState(0); // índice actual de la fuente seleccionada
 
   useEffect(() => {
     fetch(
@@ -33,9 +33,27 @@ export const StateCompo = ({ children }) => {
       const randomFont = fontsData.items[randomIndex].family;
       // Actualizar el estado con la fuente aleatoria seleccionada
       setSelectedFont(randomFont);
+      setIndecActual(randomIndex);
     }
   }
 
+  function handleClickAnterior() {
+    if (indexActual > 0) {
+      const newIndex = indexActual - 1;
+      setSelectedFont(fontsData.items[newIndex].family);
+      setIndecActual(newIndex);
+      console.log(`anterior ${indexActual}`)
+    }
+  }
+
+  function handleClickSiguiente() {
+    if (fontsData && indexActual < fontsData.items.length - 1) {
+      const newIndex = indexActual + 1;
+      setSelectedFont(fontsData.items[newIndex].family);
+      setIndecActual(newIndex);
+      console.log(`siguiente {currentIndex: ${currentIndex}`)
+    }
+  }
   return (
     <counterContext.Provider
       value={{
@@ -46,6 +64,9 @@ export const StateCompo = ({ children }) => {
         randomIndex,
         setRandomIndex,
         handleClick,
+        handleClickAnterior,
+        handleClickSiguiente,
+        indexActual
       }}
     >
       {children}
