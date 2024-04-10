@@ -8,7 +8,6 @@ export const GridCuatro = () => {
     handleClickAnterior,
     handleClickSiguiente,
     indexActual,
-    category
   } = useContext(counterContext);
 
   return (
@@ -19,7 +18,6 @@ export const GridCuatro = () => {
         <p className="nombreFuente">
           Fuente: {selectedFont ? selectedFont : "Arial"}
         </p>
-        <p className="category">Categoria: {category}</p>
         <p className="nombreFuente">Total de fuentes: 1618</p>
         <p className="nombreFuente">
           Numero de la fuente: {indexActual ? indexActual : 1}
