@@ -51,7 +51,7 @@ export const StateCompo = ({ children }) => {
       const newIndex = indexActual + 1;
       setSelectedFont(fontsData.items[newIndex].family);
       setIndecActual(newIndex);
-      console.log(`siguiente {currentIndex: ${currentIndex}`)
+      console.log(`siguiente {currentIndex: ${indexActual}`)
     }
   }
   return (
