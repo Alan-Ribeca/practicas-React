@@ -16,7 +16,6 @@ export const StateCompo = ({ children }) => {
     )
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setFontsData(data);
       })
       .catch((error) => {

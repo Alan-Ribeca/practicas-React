@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import "./contenedor.scss";
 import { useContext, useEffect } from "react";
 import { counterContext } from "../../context/counterContext";
@@ -7,7 +8,7 @@ import { GridTres } from "../gridTres/GridTres";
 import { GridCuatro } from "../gridCuatro/GridCuatro";
 
 export const Container = () => {
-  const { selectedFont, handleClick } = useContext(counterContext);
+  const { selectedFont, handleClick, fontsData } = useContext(counterContext);
 
   useEffect(() => {
     const handleKeyDown = (event) => {
@@ -38,13 +39,8 @@ export const Container = () => {
 
         <div className="input">
           <p className="instrucciones">
-            Presione la barra espaciadora o ingrese el nombre de una propiedad
+            Presione la barra espaciadora o use las flecha en el cuadro <strong className="detalles">Detalles</strong> 
           </p>
-          <input
-            type="text"
-            placeholder="(el nombre de la propiedad) y un logo a la derecha"
-            className="inputBuscador"
-          />
         </div>
         <section className="container" style={{ fontFamily: selectedFont }}>
           <article className="grid" style={{ fontFamily: selectedFont }}>
