@@ -16,7 +16,7 @@ export const GridCuatro = () => {
         <h5 className="detalles">Detalles</h5>
         <hr className="hrDetalles" />
         <p className="nombreFuente">
-          Fuente: {selectedFont ? selectedFont : "Arial"}
+          Fuente: {selectedFont ? selectedFont : "ABeeZee"}
         </p>
         <p className="nombreFuente">Total de fuentes: 1618</p>
         <p className="nombreFuente">
@@ -24,9 +24,13 @@ export const GridCuatro = () => {
         </p>
         <p className="nombreFuente">
           <a
-            href={`https://fonts.google.com/specimen/${selectedFont
-              .split(" ")
-              .join("+")}`}
+            href={
+              selectedFont
+                ? `https://fonts.google.com/specimen/${selectedFont
+                    .split(" ")
+                    .join("+")}`
+                : "https://fonts.google.com/specimen/ABeeZee"
+            }
             target="_blank"
             rel="noopener noreferrer"
             className="fuenteA"
