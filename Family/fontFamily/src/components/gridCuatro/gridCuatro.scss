@@ -18,19 +18,36 @@
 
   .nombreFuente {
     font-size: 1.3rem;
+    margin: 1.5rem 0 1.5rem 1rem;
   }
+
+  .fuenteA {
+    position: relative;
+    color: rgba(208, 208, 216, 0.918);
+    font-size: 1.3rem;
+    text-decoration: none;
+
+    &:hover {
+      color: white;
+    }
+}
 
   .containerBoton {
     display: flex;
     justify-content: space-around;
-    margin-top: 4rem;
+    margin-top: 2rem;
+    position: relative;
+    height: 24%;
 
     .btnAnterior {
+      position: absolute;
+      bottom: 31%;
+      left: 10%;
       border-radius: 10px;
-      width: 7rem;
-      height: 2.3rem;
-      background-color: rgba(208, 208, 216, 0.808);
       border: none;
+      height: 2rem;
+      width: 7.5rem;
+      background-color: rgba(208, 208, 216, 0.808);
 
       &:hover {
         cursor: pointer;
@@ -41,11 +58,14 @@
     }
 
     .btnSiguiente {
+      position: absolute;
+      bottom: 31%;
+      right: 10%;
       border-radius: 10px;
-      width: 7rem;
-      height: 2.3rem;
-      background-color: rgba(208, 208, 216, 0.808);
       border: none;
+      height: 2rem;
+      width: 7.5rem;
+      background-color: rgba(208, 208, 216, 0.808);
       transition: all 0.3s;
 
       &:hover {

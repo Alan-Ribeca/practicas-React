@@ -3,26 +3,31 @@
   justify-content: space-around;
   align-items: center;
 
+  .logo {
+    margin: 0.3rem 0 0.3rem 0;
+    height: 90px;
+  }
+
+  .ulNav {
+    width: 200px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .liNav {
+    list-style: none;
+    color: rgba(208, 208, 216, 0.808);
+
+    &:hover {
+      cursor: pointer;
+      color: rgb(255, 255, 255);
+    }
+  }
+
   @media screen and (min-width: 1000px) {
     justify-content: space-between;
-  }
-}
-
-.ulNav {
-  width: 200px;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: space-around;
-}
-
-.liNav {
-  list-style: none;
-  color: rgba(208, 208, 216, 0.808);
-
-  &:hover {
-    cursor: pointer;
-    color: rgb(255, 255, 255);
   }
 }
 
