@@ -21,8 +21,12 @@
     margin: 1.5rem 0 1.5rem 1rem;
   }
 
+  .nombreFuente-usar {
+    margin: 1rem;
+  }
+
   .fuenteA {
-    position: relative;
+    position: absolute;
     color: rgba(208, 208, 216, 0.918);
     font-size: 1.3rem;
     text-decoration: none;
@@ -35,7 +39,7 @@
   .containerBoton {
     display: flex;
     justify-content: space-around;
-    margin-top: 2rem;
+    margin-top: 4.8rem;
     position: relative;
     height: 24%;
 
@@ -84,9 +88,14 @@
     position: relative;
 
     .nombreFuente-usar {
-      position: absolute;
       top: 3%;
       right: 12%;
+      
+      .fuenteA {
+        position: absolute;
+        top: 27%;
+        right: 13%;
+      }
     }
 
     .containerBoton {

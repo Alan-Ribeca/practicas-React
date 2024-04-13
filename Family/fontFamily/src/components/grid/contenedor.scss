@@ -26,10 +26,9 @@
     color: rgba(208, 208, 216, 0.808);
 
     .detalles {
-      color: #7b52b9f8;;
+      color: #7b52b9f8;
     }
   }
-
 }
 
 .container {
@@ -52,11 +51,9 @@
     grid-template-rows: minmax(170px, auto);
     gap: 2.5rem;
   }
-
 }
 
 .titulo {
-  
   .h1Principal {
     margin-bottom: 0.5rem;
   }
@@ -80,3 +77,12 @@
   }
 }
 
+@media screen and (max-width: 1225px) {
+  .container {
+    width: 100%;
+
+    .grid {
+      width: 100%;
+    }
+  }
+}
