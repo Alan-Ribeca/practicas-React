@@ -96,3 +96,13 @@
     fill: #333;
   }
 }
+
+@media screen and (max-width: 1536px) {
+  .footer {
+    margin: 3rem 0 1rem 0;
+    
+    .infoPersonal {
+      margin-top: 1.5rem;
+    }
+  } 
+}

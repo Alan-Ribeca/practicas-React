@@ -1,5 +1,8 @@
 .containerGridTable {
   position: relative;
+  border-radius: 10px;
+  box-shadow: -1px -1px 9px -3px rgba(208, 208, 216, 0.808);
+  width: 100%;
 
   .brCalendarioTop {
     position: absolute;
@@ -37,9 +40,6 @@
 
   .gridDos {
     padding: 4rem 1rem 4rem 1rem;
-    border-radius: 10px;
-    box-shadow: -1px -1px 9px -3px rgba(208, 208, 216, 0.808);
-    width: 100%;
     height: 100%;
 
     .th {
@@ -66,6 +66,33 @@
       background-color: rgba(255, 255, 255, 0.808);
       transition: all 0.3s;
       box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b99f;
+    }
+  }
+}
+
+@media screen and (max-width: 1536px) {
+  .containerGridTable {
+    .brCalendarioTop {
+      left: 14%;
+      width: 70%;
+    }
+
+    .calendario {
+      left: 16%;
+    }
+
+    .mes {
+      left: 72%;
+    }
+
+    .gridDos {
+      width: 88%;
+      padding-left: 13%;
+    }
+
+    .brCalendarioButtom {
+      left: 14%;
+      width: 70%;
     }
   }
 }

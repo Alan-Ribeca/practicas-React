@@ -30,7 +30,7 @@
     &:hover {
       color: white;
     }
-}
+  }
 
   .containerBoton {
     display: flex;
@@ -73,6 +73,24 @@
         background-color: rgba(255, 255, 255, 0.808);
         box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 1536px) {
+  .containerGridCuatro {
+    grid-column: 1 / 3;
+    width: 50%;
+    position: relative;
+
+    .nombreFuente-usar {
+      position: absolute;
+      top: 3%;
+      right: 12%;
+    }
+
+    .containerBoton {
+      margin-top: 4rem;
     }
   }
 }

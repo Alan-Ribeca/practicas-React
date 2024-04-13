@@ -22,7 +22,7 @@ export const GridCuatro = () => {
         <p className="nombreFuente">
           Numero de la fuente: {indexActual ? indexActual : 0}
         </p>
-        <p className="nombreFuente">
+        <p className="nombreFuente-usar">
           <a
             href={
               selectedFont
@@ -35,7 +35,7 @@ export const GridCuatro = () => {
             rel="noopener noreferrer"
             className="fuenteA"
           >
-            Usar fuente...
+            Usar fuente
           </a>
         </p>
         <div className="containerBoton">

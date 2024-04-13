@@ -52,4 +52,31 @@
     grid-template-rows: minmax(170px, auto);
     gap: 2.5rem;
   }
+
 }
+
+.titulo {
+  
+  .h1Principal {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.input .instrucciones {
+  font-size: 0.8rem;
+  width: 13rem;
+}
+
+@media screen and (max-width: 1536px) {
+  .containerGeneral {
+    margin-top: 5rem;
+  }
+
+  .container .grid {
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    width: 80%;
+    gap: 2rem;
+  }
+}
+

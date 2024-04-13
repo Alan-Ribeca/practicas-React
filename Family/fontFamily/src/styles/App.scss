@@ -5,8 +5,7 @@ html, .body {
   background-color: rgb(3, 3, 3);  
   font-family: "ABeeZee", sans-serif;
 
-
-  @media screen and (max-width: 1000px) {
-    width: 98%;
+  @media screen and (max-width: 1536px) {
+    width: 100%;
   }
 }

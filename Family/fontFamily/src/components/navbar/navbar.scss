@@ -26,8 +26,9 @@
     }
   }
 
-  @media screen and (min-width: 1000px) {
+  @media screen and (max-width: 1536px) {
     justify-content: space-between;
+    margin: 0 1.5rem;
   }
 }
 

@@ -39,7 +39,7 @@ export const Container = () => {
 
         <div className="input">
           <p className="instrucciones">
-            Presione la barra espaciadora o use las flecha en el cuadro <strong className="detalles">Detalles</strong> 
+            Presione la <strong className="detalles">barra espaciadora</strong> o use las flecha en el cuadro <strong className="detalles">Detalles</strong> 
           </p>
         </div>
         <section className="container" style={{ fontFamily: selectedFont }}>
