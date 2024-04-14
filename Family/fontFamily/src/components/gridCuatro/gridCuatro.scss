@@ -87,6 +87,14 @@
     width: 50%;
     position: relative;
 
+    .nombreFuente {
+      width: 50%;
+      line-height: 1.2;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
     .nombreFuente-usar {
       top: 3%;
       right: 12%;
@@ -133,6 +141,7 @@
     position: static;
 
     .nombreFuente {
+      width: 100%;
       margin: 1.5rem 0;
     }
 
