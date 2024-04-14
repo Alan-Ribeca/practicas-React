@@ -90,7 +90,7 @@
     .nombreFuente-usar {
       top: 3%;
       right: 12%;
-      
+
       .fuenteA {
         position: absolute;
         top: 27%;
@@ -100,6 +100,54 @@
 
     .containerBoton {
       margin-top: 4rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .containerGridCuatro {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .containerGridCuatro {
+    width: 57%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .containerGridCuatro {
+    width: 67%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .containerGridCuatro {
+    width: 96%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .containerGridCuatro {
+    position: static;
+
+    .nombreFuente {
+      margin: 1.5rem 0;
+    }
+
+    .nombreFuente-usar {
+      margin: -1.5rem 0;
+
+      .fuenteA {
+        position: static;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    .containerBoton {
+      margin-top: 5rem;
     }
   }
 }

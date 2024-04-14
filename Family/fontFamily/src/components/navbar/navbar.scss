@@ -29,6 +29,10 @@
   @media screen and (max-width: 1536px) {
     margin: 0 1.5rem;
   }
+
+  @media screen and (max-width: 500px) {
+    margin: 0;
+  }
 }
 
 .hrNav {

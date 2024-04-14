@@ -8,7 +8,7 @@ export const Header = () => {
       <nav className="navbar">
         <img src={img} alt="logo" className="logo"/>
         <ul className="ulNav">
-          <li className="liNav">Crear</li>
+          <li className="liNav">Combinar</li>
           <li className="liNav">Navagar</li>
         </ul>
       </nav>

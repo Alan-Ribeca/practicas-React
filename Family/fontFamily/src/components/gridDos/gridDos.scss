@@ -123,3 +123,54 @@
     }
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .containerGridTable {
+    width: 53.2%;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .containerGridTable {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .containerGridTable {
+    width: 70%;
+
+    .brCalendarioTop {
+      left: 9%;
+      width: 81%;
+    }
+
+    .calendario {
+      left: 11%;
+    }
+
+    .mes {
+      left: 76%;
+    }
+
+    .gridDos {
+      width: 94%;
+      padding-left: 9%;
+    }
+
+    .brCalendarioButtom {
+      left: 9%;
+      width: 81%;
+    }
+
+    .btnCalendario {
+      right: 9%;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) { 
+  .containerGridTable {
+    width: 100%;
+  }
+}

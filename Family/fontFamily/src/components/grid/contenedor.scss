@@ -86,3 +86,21 @@
     }
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .container .grid {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 550px) { 
+  .containerGeneral {
+    .titulo {
+      width: 98%;
+      .h1Principal {
+        font-size: 3rem;
+      }
+    }
+  }
+}

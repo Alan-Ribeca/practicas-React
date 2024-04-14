@@ -66,3 +66,27 @@
     }
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .gridTres {
+    width: 53.2%;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .gridTres {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .gridTres {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .gridTres .titulos {
+    margin-left: 0.5rem;
+  }
+}
